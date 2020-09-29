@@ -1,4 +1,4 @@
-# Client-Side Prototype Pollution Research
+# Client-Side Prototype Pollution
 
 ## Intro
 
