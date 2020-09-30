@@ -14,6 +14,14 @@ goog.html.sanitizer.AttributeWhitelist = {
 ...
 }
 ```
+https://github.com/google/closure-library/blob/88f3857a26ec5ead36b4b49cb6c3f011cc534971/closure/goog/base.js#L2210-L2214
+```js
+  goog.findBasePath_ = function() {
+    if (goog.global.CLOSURE_BASE_PATH != undefined &&
+        // Anti DOM-clobbering runtime check (b/37736576).
+        typeof goog.global.CLOSURE_BASE_PATH === 'string') {
+      goog.basePath = goog.global.CLOSURE_BASE_PATH;
+```
 
 ### PoC
 
