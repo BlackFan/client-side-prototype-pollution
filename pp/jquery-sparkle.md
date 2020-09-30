@@ -8,6 +8,8 @@ Used in:
 
 ### Vulnerable code fragment
 
+https://github.com/bevry-archive/jquery-sparkle/blob/1cf0bd0ab37372ea9c22c189e8bc2b9504329622/scripts/jquery.sparkle.js
+
 The parsing is poorly written and also has XSS.
 
 ```js

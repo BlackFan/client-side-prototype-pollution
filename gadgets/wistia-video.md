@@ -3,6 +3,7 @@
 URL: https://wistia.com/support/embed-and-share/video-on-your-website
 
 ### Vulnerable code fragment
+https://fast.wistia.com/assets/external/E-v1.js
 ```js
 if (this.chrome = r.elem.fromObject({
     id: r.seqId('wistia_chrome_'),

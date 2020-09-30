@@ -4,6 +4,8 @@ URL: https://github.com/V4Fire/Core
 
 ### Vulnerable code fragment
 
+https://github.com/V4Fire/Core/blob/f28cb1d6209a29cf13c6b5167784b9c81160ed66/src/core/url/convert.ts
+
 ```js
 export function fromQueryString(query: string, opts: FromQueryStringOptions): Dictionary<string | null>;
 export function fromQueryString(
