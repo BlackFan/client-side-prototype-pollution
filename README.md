@@ -14,6 +14,7 @@ In this repository, I am trying to collect examples of libraries that are vulner
 |---------------------------------------------------------|--------------------------------------------------------------------------|---------------------------------------------|--------------------------------------------------|
 | Wistia Embedded Video (**Fixed**)                       | `?__proto__[test]=test`<br>`?__proto__.test=test`                        | [[1]](https://hackerone.com/reports/986386) | [William Bowling](https://twitter.com/wcbowling) |
 | [jQuery query-object plugin](/pp/jquery-query-object.md)| `?__proto__[test]=test`<br>`#__proto__[test]=test`                       |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
+| [jQuery Sparkle](/pp/jquery-sparkle.md)                 | `?__proto__.test=test`                                                   |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
 
 ## Script Gadgets
 
