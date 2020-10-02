@@ -4,7 +4,7 @@ URL: https://github.com/jhudson8/backbone-query-parameters
 
 ### Vulnerable code fragment
 
-https://github.com/jhudson8/backbone-query-parameters/blob/master/backbone.queryparams.js
+https://github.com/jhudson8/backbone-query-parameters/blob/d6fb511bddc1b213a3b766bd10dfaf5d3b5d5aab/backbone.queryparams.js
 
 ```js
   _extractParameters: function(route, fragment) {
