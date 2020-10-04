@@ -38,7 +38,7 @@ URL: https://jquery.com/
 #### $.getScript jQuery 3.0.0 - 3.3.1
 
 ```
-?__proto__.url=data:,alert(1)//
+?__proto__[url]=data:,alert(1)//
 ```
 
 ```html
