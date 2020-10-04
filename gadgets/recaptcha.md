@@ -1,6 +1,7 @@
 ## Marionette.js / Backbone.js
 
 URL: https://www.google.com/recaptcha/api.js
+
 URL: https://www.gstatic.com/recaptcha/releases/Y5tQ3lKwn1XL5hGgLz1kR4-1/recaptcha__en.js
 
 ### Vulnerable code fragment
