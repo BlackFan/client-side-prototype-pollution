@@ -1,4 +1,4 @@
-## Marionette.js / Backbone.js
+## Google Recaptcha
 
 URL: https://www.google.com/recaptcha/api.js
 
