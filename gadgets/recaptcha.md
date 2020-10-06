@@ -2,6 +2,11 @@
 
 URL: https://www.google.com/recaptcha/about/
 
+### JS Fingerprint
+```
+return (typeof recaptcha !== 'undefined')
+```
+
 ### Vulnerable code fragment
 https://www.gstatic.com/recaptcha/releases/Y5tQ3lKwn1XL5hGgLz1kR4-1/recaptcha__en.js
 ```js

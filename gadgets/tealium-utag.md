@@ -2,6 +2,11 @@
 
 URL: https://docs.tealium.com/platforms/javascript/
 
+### JS Fingerprint
+```
+return (typeof utag !== 'undefined' && typeof utag.id !== 'undefined')
+```
+
 ### Vulnerable code fragment
 https://tags.tiqcdn.com/utag/tealium-solutions/main/prod/utag.js
 ```js

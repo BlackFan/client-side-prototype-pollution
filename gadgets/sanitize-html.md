@@ -2,6 +2,11 @@
 
 URL: https://github.com/apostrophecms/sanitize-html
 
+### JS Fingerprint
+```
+return (typeof sanitizeHtml !== 'undefined')
+```
+
 ### Vulnerable code fragment
 https://github.com/apostrophecms/sanitize-html/blob/d78ee44069b3a3bb70aca3289de63b7acbffd4f2/index.js#L275-L280
 ```js

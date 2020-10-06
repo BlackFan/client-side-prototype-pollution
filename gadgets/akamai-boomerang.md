@@ -2,6 +2,11 @@
 
 URL: https://developer.akamai.com/tools/boomerang
 
+### JS Fingerprint
+```
+return (typeof BOOMR !== 'undefined')
+```
+
 ### Vulnerable code fragment
 https://github.com/akamai/boomerang#32-adding-it-via-an-iframepreload
 ```js

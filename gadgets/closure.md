@@ -2,6 +2,11 @@
 
 URL: https://github.com/google/closure-library/
 
+### JS Fingerprint
+```
+return (typeof goog !== 'undefined' && typeof goog.basePath !== 'undefined')
+```
+
 ### Vulnerable code fragment
 https://github.com/google/closure-library/blob/5a0002f16c91d41f5de3dc7bdcafe9b74b1b4fa0/closure/goog/html/sanitizer/attributewhitelist.js#L22-L107
 ```js

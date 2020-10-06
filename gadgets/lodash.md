@@ -2,6 +2,11 @@
 
 URL: https://lodash.com/
 
+### JS Fingerprint
+```
+return (typeof _ !== 'undefined' && typeof _.template !== 'undefined' && typeof _.VERSION !== 'undefined')
+```
+
 ### Vulnerable code fragment
 https://github.com/lodash/lodash/blob/ddfd9b11a0126db2302cb70ec9973b66baec0975/lodash.js#L14804-L14872
 ```js

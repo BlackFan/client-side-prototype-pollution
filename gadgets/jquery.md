@@ -2,6 +2,16 @@
 
 URL: https://jquery.com/
 
+### JS Fingerprint
+```
+return (typeof $ !== 'undefined' && typeof $.fn !== 'undefined' && $.fn.jquery !== 'undefined')
+```
+
+### JS Fingerprint
+```
+return (filterXSS !== 'undefined')
+```
+
 ### PoC
 #### $.get jQuery >= 3.0.0
 ```

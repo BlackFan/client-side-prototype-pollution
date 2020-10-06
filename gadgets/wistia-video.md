@@ -2,6 +2,11 @@
 
 URL: https://wistia.com/support/embed-and-share/video-on-your-website
 
+### JS Fingerprint
+```
+return (typeof wistiaEmbeds !== 'undefined')
+```
+
 ### Vulnerable code fragment
 https://fast.wistia.com/assets/external/E-v1.js
 ```js
