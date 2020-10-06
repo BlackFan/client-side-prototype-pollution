@@ -4,7 +4,7 @@ URL: https://github.com/cure53/DOMPurify/
 
 ### JS Fingerprint
 ```
-return (DOMPurify !== 'undefined')
+return (typeof DOMPurify !== 'undefined')
 ```
 
 ### Vulnerable code fragment
