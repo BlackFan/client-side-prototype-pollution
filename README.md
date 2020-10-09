@@ -19,6 +19,7 @@ In this repository, I am trying to collect examples of libraries that are vulner
 | [backbone-query-parameters](/pp/backbone-qp.md)         | `?__proto__.test=test`                                                   |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
 | [jQuery BBQ](/pp/jquery-bbq.md)                         | `?__proto__[test]=test`                                                  |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
 | [jquery-deparam](/pp/jquery-deparam.md)                 | `?__proto__[test]=test`                                                  |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
+| [MooTools More](/pp/mootools-more.md)                   | `?__proto__[test]=test`                                                  |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
 
 ## Script Gadgets
 
