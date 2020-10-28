@@ -2,6 +2,9 @@
 
 URL: https://github.com/cowboy/jquery-bbq
 
+Used in:
+ * jquery.xLazyLoader.js 1.3
+
 ### Vulnerable code fragment
 
 https://github.com/cowboy/jquery-bbq/blob/8e0064ba68a34bcd805e15499cb45de3f4cc398d/jquery.ba-bbq.js#L466-L556
