@@ -22,7 +22,7 @@ In this repository, I am trying to collect examples of libraries that are vulner
 | [MooTools More](/pp/mootools-more.md)                             | `?__proto__[test]=test`<br>`?constructor[prototype][test]=test`          |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
 | [Swiftype Site Search (**Fixed**)](/pp/swiftype-site-search.md)   | `#__proto__[test]=test`                                                  |                                             | [s1r1us](https://twitter.com/S1r1u5_)            |
 | [CanJS deparam](/pp/canjs-deparam.md)                             | `?__proto__[test]=test`<br>`?constructor[prototype][test]=test`          |                                             | [Rahul Maini](https://twitter.com/iamnoooob)     |
-| [Purl (jQuery-URL-Parser)](/pp/purl.md)                           | `?__proto__[test]=test`<br>>`?constructor[prototype][test]=test`<br>`#__proto__[test]=test`|                           | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
+| [Purl (jQuery-URL-Parser)](/pp/purl.md)                           | `?__proto__[test]=test`<br>`?constructor[prototype][test]=test`<br>`#__proto__[test]=test`|                           | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
 
 ## Script Gadgets
 
