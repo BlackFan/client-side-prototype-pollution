@@ -55,4 +55,5 @@ Backbone.history.start();
 ```
 ?__proto__.test=test
 ?constructor.prototype.test=test
+?__proto__.array=1|2|3
 ```
