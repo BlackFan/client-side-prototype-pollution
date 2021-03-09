@@ -2,6 +2,11 @@
 
 URL: https://github.com/leizongmin/js-xss/
 
+### JS Fingerprint
+```
+return (typeof filterXSS !== 'undefined')
+```
+
 ### Vulnerable code fragment
 https://github.com/leizongmin/js-xss/blob/3cf0ff6f865118bb5759ae9cdead6ae949648e43/lib/xss.js#L84
 ```js

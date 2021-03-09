@@ -101,4 +101,7 @@ url_convert.fromQueryString(location.search, {separator: '.'})
 
 location.search = '?__proto__[test]=test'
 url_convert.fromQueryString(location.search, {arraySyntax: true})
+
+location.search = '?__proto__[test]={"json":"value"}'
+url_convert.fromQueryString(location.search, {arraySyntax: true})
 ```

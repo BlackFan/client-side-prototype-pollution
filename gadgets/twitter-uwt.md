@@ -2,6 +2,11 @@
 
 URL: https://static.ads-twitter.com/uwt.js
 
+### JS Fingerprint
+```
+return (typeof twq !== 'undefined' && typeof twq.version !== 'undefined')
+```
+
 ### Vulnerable code fragment
 ```js
 loadPixels: function(e) {

@@ -3,6 +3,12 @@
 URL: https://marionettejs.com/  
 URL: https://backbonejs.org/
 
+### JS Fingerprint
+```
+return (typeof Marionette !== 'undefined')
+return (typeof Backbone !== 'undefined' && typeof Backbone.VERSION !== 'undefined')
+```
+
 ### Vulnerable code fragment
 https://github.com/jashkenas/backbone/blob/153dc41616a1f2663e4a86b705fefd412ecb4a7a/backbone.js#L1435-L1436
 ```js
