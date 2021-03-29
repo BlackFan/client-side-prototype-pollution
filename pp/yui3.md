@@ -53,7 +53,54 @@ pieceParser = function (eq) {
         ret[tail] = val;
         return parsePiece(head, ret);
     };
-},         
+},
+
+// the reducer function that merges each query piece together into one set of params
+mergeParams = function(params, addition) {
+    return (
+        // if it's uncontested, then just return the addition.
+        (!params) ? addition
+        // if the existing value is an array, then concat it.
+        : (Y.Lang.isArray(params)) ? params.concat(addition)
+        // if the existing value is not an array, and either are not objects, arrayify it.
+        : (!Y.Lang.isObject(params) || !Y.Lang.isObject(addition)) ? [params].concat(addition)
+        // else merge them as objects, which is a little more complex
+        : mergeObjects(params, addition)
+    );
+},
+
+// Merge two *objects* together. If this is called, we've already ruled
+// out the simple cases, and need to do the for-in business.
+mergeObjects = function(params, addition) {
+    for (var i in addition) {
+        if (i && addition.hasOwnProperty(i)) {
+            params[i] = mergeParams(params[i], addition[i]);
+        }
+    }
+    return params;
+};
+
+/**
+ * Accept Query Strings and return native JavaScript objects.
+ *
+ * @method parse
+ * @param qs {String} Querystring to be parsed into an object.
+ * @param sep {String} (optional) Character that should join param k=v pairs together. Default: "&"
+ * @param eq  {String} (optional) Character that should join keys to their values. Default: "="
+ * @public
+ * @static
+ */
+QueryString.parse = function (qs, sep, eq) {
+    // wouldn't Y.Array(qs.split()).map(pieceParser(eq)).reduce(mergeParams) be prettier?
+    return Y.Array.reduce(
+        Y.Array.map(
+            qs.split(sep || "&"),
+            pieceParser(eq || "=")
+        ),
+        {},
+        mergeParams
+    );
+};         
 ```
 
 ### PoC
