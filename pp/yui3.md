@@ -4,7 +4,7 @@ URL: https://clarle.github.io/yui3/
 
 ### Vulnerable code fragment
 
-https://github.com/yui/yui3/blob/25264e3629b1c07fb779d203c4a25c0879ec862c/src/querystring/js/querystring-parse.js#L47-L91
+https://github.com/yui/yui3/blob/25264e3629b1c07fb779d203c4a25c0879ec862c/src/querystring/js/querystring-parse.js#L46-L139
 
 ```js
 pieceParser = function (eq) {
