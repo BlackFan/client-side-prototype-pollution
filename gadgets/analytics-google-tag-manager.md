@@ -1,4 +1,4 @@
-## Google Tag Manager
+## Google Tag Manager plugin for analytics
 
 ### URL
 
