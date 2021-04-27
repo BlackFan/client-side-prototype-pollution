@@ -4,7 +4,7 @@ URL: https://github.com/stretchr/arg.js
 
 ### Vulnerable code fragment
 
-https://github.com/stretchr/arg.js/blob/master/src/arg.js##L47-L133
+https://github.com/stretchr/arg.js/blob/c025436431d30404fb0ef686696d629d411b5ed9/src/arg.js#L47-L133
 
 ```js
 Arg.parse = function(s){
@@ -72,12 +72,13 @@ Arg._access = function(obj, selector, value) {
 
 ### PoC
 ```html
-<script src="/arg.js"></script>
+<script src="https://raw.githack.com/stretchr/arg.js/master/dist/arg-1.4.js"></script>
 <script>
     Arg.parse(location.search)
 </script>
 ```
 ```
 ?__proto__[test]=test
+?constructor[prototype][test]=test
 #__proto__[test]=test
 ```
