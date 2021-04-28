@@ -28,7 +28,7 @@ In this repository, I am trying to collect examples of libraries that are vulner
 | [Mutiny](/pp/mutiny.md)                                           | `?__proto__.test=test`                                                   |                                             | [SPQR](https://twitter.com/amlnspqr)             |
 | [jQuery parseParams](/pp/jquery-parseparam.md)                    | `?__proto__.test=test`<br>`?constructor.prototype.test=test`             |                                             | [POSIX](https://twitter.com/po6ix)               |
 | [php.js parse_str](/pp/parse_str.md)                              | `?__proto__[test]=test`<br>`?constructor[prototype][test]=test`          |                                             | [POSIX](https://twitter.com/po6ix)               |
-| [arg.js](/pp/arg-js.md)                                           | `?__proto__[test]=test`<br>`?constructor[prototype][test]=test`<br>`#__proto__[test]=test`|                            | [POSIX](https://twitter.com/po6ix)               |
+| [arg.js](/pp/arg-js.md)                                           | `?__proto__[test]=test`<br>`?__proto__.test=test`<br>`?constructor[prototype][test]=test`<br>`#__proto__[test]=test`|                            | [POSIX](https://twitter.com/po6ix)               |
 | [davis.js](/pp/davis-js.md)                                       | `?__proto__[test]=test`                                                  |                                             | [POSIX](https://twitter.com/po6ix)               |
 
 ## Script Gadgets

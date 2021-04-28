@@ -79,6 +79,7 @@ Arg._access = function(obj, selector, value) {
 ```
 ```
 ?__proto__[test]=test
+?__proto__.test=test
 ?constructor[prototype][test]=test
 #__proto__[test]=test
 ```
