@@ -2,6 +2,9 @@
 
 URL: https://github.com/jhudson8/backbone-query-parameters
 
+### CVE
+[CVE-2021-20085](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20085)
+
 ### Vulnerable code fragment
 
 https://github.com/jhudson8/backbone-query-parameters/blob/d6fb511bddc1b213a3b766bd10dfaf5d3b5d5aab/backbone.queryparams.js

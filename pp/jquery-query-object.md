@@ -2,6 +2,9 @@
 
 URL: https://github.com/alrusdi/jquery-plugin-query-object
 
+### CVE
+[CVE-2021-20083](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20083)
+
 ### Vulnerable code fragment
 
 https://github.com/alrusdi/jquery-plugin-query-object/blob/9e5871fbb531c5e246aac2aaf056b237bc7cc0a6/jquery.query-object.js
