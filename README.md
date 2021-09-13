@@ -32,7 +32,7 @@ In this repository, I am trying to collect examples of libraries that are vulner
 | [davis.js](/pp/davis-js.md)                                                | `?__proto__[test]=test`                                                  |                                             | [POSIX](https://twitter.com/po6ix)               |
 | [Component querystring](/pp/component_querystring.md)                      | `?__proto__[NUMBER]=test`<br>`?__proto__[123]=test`                      |                                             | [Masato Kinugawa](https://twitter.com/kinugawamasato)|
 | [Aurelia path](/pp/aurelia.md)                                             | `?__proto__[test]=test`                                                  | [[1]](https://github.com/aurelia/path/issues/44) | [s1r1us](https://twitter.com/S1r1u5_)            |
-| [analytics-utils < 1.0.3](/pp/analytics-utils.md)                          | `?__proto__[test]=test`<br>`?constructor.prototype.test=test`            | [[1]](https://github.com/DavidWells/analytics/issues/204) | [alexdaviestray](https://github.com/alexdaviestray) |
+| [analytics-utils < 1.0.3](/pp/analytics-utils.md)                          | `?__proto__[test]=test`<br>`?constructor[prototype][test]=test`          | [[1]](https://github.com/DavidWells/analytics/issues/204) | [alexdaviestray](https://github.com/alexdaviestray) |
 
 ## Script Gadgets
 
