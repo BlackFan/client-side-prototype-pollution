@@ -2,6 +2,9 @@
 
 URL: https://github.com/AceMetrix/jquery-deparam
 
+### CVE
+[CVE-2021-20087](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20087)
+
 ### Vulnerable code fragment
 
 https://github.com/AceMetrix/jquery-deparam/blob/81428b3939c4cbe488202b5fa823ad661d64fb49/jquery-deparam.js#L22-L117

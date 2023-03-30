@@ -2,6 +2,9 @@
 
 URL: https://github.com/mootools/mootools-more
 
+### CVE
+[CVE-2021-20088](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20088)
+
 ### JS Fingerprint
 ```
 return (typeof String.parseQueryString != 'undefined')

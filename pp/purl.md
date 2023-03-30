@@ -2,6 +2,9 @@
 
 URL: https://github.com/allmarkedup/purl
 
+### CVE
+[CVE-2021-20089](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20089)
+
 ### Vulnerable code fragment
 
 https://github.com/allmarkedup/purl/blob/6df9a03833ebbd479baede1e0111186a5d9906a2/purl.js#L111-L126

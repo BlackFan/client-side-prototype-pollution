@@ -6,6 +6,9 @@ Used in:
  * https://github.com/ckan/ckan
  * https://github.com/codrops/GammaGallery
 
+### CVE
+[CVE-2021-20084](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20084)
+
 ### Vulnerable code fragment
 
 https://github.com/bevry-archive/jquery-sparkle/blob/1cf0bd0ab37372ea9c22c189e8bc2b9504329622/scripts/jquery.sparkle.js
