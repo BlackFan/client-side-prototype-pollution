@@ -142,7 +142,7 @@ return (typeof $ !== 'undefined' && typeof $.fn !== 'undefined' && typeof $.fn.j
 * Sets the attribute of an element
 
 ```
-?__proto__[Onload]=alert(1)
+?__proto__[OnError]=alert(1)&__proto__[SRC]=fakeimagewontload
 ```
 
 ```html
