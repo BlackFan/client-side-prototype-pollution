@@ -136,7 +136,7 @@ return (typeof $ !== 'undefined' && typeof $.fn !== 'undefined' && typeof $.fn.j
 </script>
 ```
 
-### $(x).attr jQuery (Unknown versions, need testing)
+### $(x).attr jQuery >= 1.8.0
 
 * Can be exploited through String.prototype
 * Sets the attribute of an element
